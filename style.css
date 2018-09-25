@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*External CSS Document */
+
+body{
+	
+	margin:auto;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+.login-Field{
+
+	float: left;
+	margin:100px;
+}	
+fieldset{
+	box-shadow: 2px 4px #999999;
+}
+.content{
+	float: right;
+}
+

@@ -1,0 +1,93 @@
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=tel] {
+    width: 83%;
+    padding: 12px 10px;
+    margin: 11px 25px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+	height:52px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Add padding to container elements */
+.contain{
+    padding: 16px;
+	width: 90%;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+
+.loginBtnBlock{
+	display: inline-block;
+	margin: 0 25px;
+}
+
+.signUpBlock{
+    float: left;
+    margin-right: 15px;
+}
+
+.cancelBtnBlock{
+	float: right;
+}
+.category {
+	margin-left:25px;
+}
+
+.signUpForm{
+    border: 1px solid #ccc;
+    max-width: 500px;
+	min-width: 250px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.signUpForm label {
+    margin: 5px 0 2px 26px;
+}
+
+h2 {
+	text-align: center;
+}
+
+select{
+	width: 83%;
+    padding: 12px 10px;
+    margin: 19px 17px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
