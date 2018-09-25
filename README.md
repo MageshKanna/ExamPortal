@@ -1,4 +1,4 @@
-#ExamPortal
+<h2>ExamPortal</h2>
 
 A light weight resumable ExamPortal based on PHP
 
