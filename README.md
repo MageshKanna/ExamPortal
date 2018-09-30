@@ -14,8 +14,8 @@ Clone the repo.<br>
 Place it in www folder of your local server.<br>
 Import the exam.sql file (it's there in database folder) to PHPMyAdmin.<br>
 Open this project in a web browser.<br>
-Use email as 'admin@gmail.com' and password as 'qwerty' to log in into exam portal.<br>
-To access admin panel, click on result button on index page and use same email but password as 'qwerty1'.
+Use email as 'admin@gmail.com' and password as 'qwerty' to log in into the exam portal.<br>
+To access admin panel, click on the result button on index page and use same email but password as 'qwerty1'.
 
 <b>Note:</b> Storing password like this is a really bad idea. It's better to hash the password and store it in database.
 
