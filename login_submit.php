@@ -39,7 +39,7 @@
                     }*/
 
 
-            if($email=='admin@gmail.com' && $password==md5('admin') )
+            if($email=='admin@gmail.com' && $password==md5('qwerty') )
             {   
                  $_SESSION['admin']=$email;
                 header('location: signup.php');
