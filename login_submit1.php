@@ -17,7 +17,7 @@
             
 
 
-            if($email=='admin@gmail.com' && $password==md5('admin1') )
+            if($email=='admin@gmail.com' && $password==md5('qwerty1') )
             {
                 $_SESSION['admin1']=$email;
                 header('location: results.php');
