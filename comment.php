@@ -8,12 +8,12 @@ if (!isset($_SESSION['admin'])) {
     header('location: index.php');
 }
 
-$totalQstn = 10; //Set total no. of questions here
+$totalQstn = 50; //Set total no. of questions here
 
 
 $subject = $_SESSION['sdomain'];
-if ($subject == 'php') {
-    $qstn_query = "SELECT * FROM abhi_question WHERE subject='php' OR subject='asp'  ";
+if ($subject == 'Artisan') {
+    $qstn_query = "SELECT * FROM abhi_question WHERE subject='Artisan' ";
 } else
     $qstn_query = "SELECT * FROM abhi_question WHERE subject='" . $_SESSION['sdomain'] . "'  ";
 
@@ -95,7 +95,7 @@ if ($submit !== 'Get Result') {
             
             $tid = $_SESSION['tid'];
             
-            mysqli_data_seek($rs, ($index1 - 1)); // Seek to row number 
+            // mysqli_data_seek($rs, ($index1 - 1)); // Seek to row number 
             $row = mysqli_fetch_row($rs);
             
             $query = "insert into abhi_useranswer(stud_name,stud_email, test_number, que_des, ans1,ans2,ans3,ans4,true_ans,your_ans ) values ( '" . $_SESSION['name'] . "','" . $_SESSION['email'] . "', '$tid','$row[1]','$row[2]','$row[3]','$row[4]','$row[5]', '$row[6]','$answ') ";
@@ -125,7 +125,7 @@ if ($submit !== 'Get Result') {
         $_SESSION['qsnnumber'] = $_SESSION['qsnnumber'] + 1; // qstn number increment
         $index1                = $qstnArray[$i]; //qstn number of database
         
-        mysqli_data_seek($rs, ($index1 - 1)); // Seek to row number 
+        mysqli_data_seek($rs, ($index1)); // Seek to row number 
         $row = mysqli_fetch_row($rs);
         
 
@@ -200,22 +200,22 @@ if ($submit == 'Get Result') {
     $res = mysqli_query($con, $uq) or die(mysqli_error($con));
     
     
-    echo "<br><br><fieldset><center><h1 class=head1> Result</h1><center><br>";
-    echo "<Table align=center><tr class=tot><td>Total Question<td> &nbsp;&nbsp;" . $totalQstn;
-    echo "<tr class=tans><td>True Answer&nbsp;&nbsp;&nbsp;<td>" . $_SESSION['trueans'];
+    // echo "<br><br><fieldset><center><h1 class=head1> Result</h1><center><br>";
+    // echo "<Table align=center><tr class=tot><td>Total Question<td> &nbsp;&nbsp;" . $totalQstn;
+    // echo "<tr class=tans><td>True Answer&nbsp;&nbsp;&nbsp;<td>" . $_SESSION['trueans'];
     
-    $w = $totalQstn - $_SESSION['trueans'] - $_SESSION['naAnswer'];
-    echo "<tr class=fans><td>Wrong Answer&nbsp;&nbsp;&nbsp;<td> " . $w;
-    $rrr = $_SESSION['trueans'];
-    echo "<tr class=fans><td><b> Total score &nbsp;&nbsp;&nbsp;</b><td> " . $rrr;
-    echo "</table><fieldset>";
-    echo "<br><br><center><a href='#'><button class='btn btn-success'>Get Certificate</button></a></center>";
-    $date  = date("Y:m:d H:i:s");
-    $query = "insert into abhi_result(test_number,test_date,score,stud_name,stud_email,test_subject,domain) values ( '$tid','$date','$rrr','" . $_SESSION['name'] . "','" . $_SESSION['email'] . "', '" . $_SESSION['sdomain'] . "','" . $_SESSION['domain'] . "' )";
-    $reslt = mysqli_query($con, $query) or die(mysqli_error($con));
-    if (!$reslt) {
-        die("error");
-    }
+    // $w = $totalQstn - $_SESSION['trueans'] - $_SESSION['naAnswer'];
+    // echo "<tr class=fans><td>Wrong Answer&nbsp;&nbsp;&nbsp;<td> " . $w;
+    // $rrr = $_SESSION['trueans'];
+    // echo "<tr class=fans><td><b> Total score &nbsp;&nbsp;&nbsp;</b><td> " . $rrr;
+    // echo "</table><fieldset>";
+    // echo "<br><br><center><a href='#'><button class='btn btn-success'>Get Certificate</button></a></center>";
+    // $date  = date("Y:m:d H:i:s");
+    // $query = "insert into abhi_result(test_number,test_date,score,stud_name,stud_email,test_subject,domain) values ( '$tid','$date','$rrr','" . $_SESSION['name'] . "','" . $_SESSION['email'] . "', '" . $_SESSION['sdomain'] . "','" . $_SESSION['domain'] . "' )";
+    // $reslt = mysqli_query($con, $query) or die(mysqli_error($con));
+    // if (!$reslt) {
+        // die("error");
+    // }
     
     echo "<br><br><h2 align=center>Well done! Exam is over now.<br><br><br> Please submit the feedback form below:</h2>";
     unset($_SESSION['tid']);
