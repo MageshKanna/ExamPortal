@@ -1,4 +1,3 @@
-
 <?php 
 date_default_timezone_set("Asia/Kolkata");
 
@@ -81,6 +80,7 @@ if (isset($_COOKIE[$cookie_name])) {
 		$eml=$_SESSION['email'];
 		$uq="UPDATE `exam_status` SET `cookie`='$cookie_value' ,`start_time`='$timee',`last_time`='$timee' WHERE `email`='$eml'   ";
 		$res=mysqli_query($con,$uq ) or die(mysqli_error($con));
+
 	}
 
 
@@ -94,30 +94,30 @@ if (!isset($_SESSION['email']))
 
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
-<title>Exam Portal</title>
-<!-- custom-theme -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
+    <title>Exam Portal</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
 
-<
-<script>
-  function resizeIframe(obj) {
-    obj.style.height = 180+ obj.contentWindow.document.body.scrollHeight +'px';
-  }
-</script>
-
+    <script>
+    function resizeIframe(obj) {
+        obj.style.height = 180 + obj.contentWindow.document.body.scrollHeight + 'px';
+    }
+    </script>
 
 
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<!-- stylesheet -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
 
- 
-<!-- //font-awesome-icons -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- stylesheet -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+
+
+    <!-- //font-awesome-icons -->
 </head>
 
 
@@ -128,129 +128,137 @@ if (!isset($_SESSION['email']))
 
 <body>
 
-	<div class="navbar navbar-default navbar-fixed-top">
-    <div class="container"> 
-        <div class="navbar-header"> 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
-                <span class="icon-bar"></span> 
-                <span class="icon-bar"></span> 
-                <span class="icon-bar"></span>
-            </button> 
-            
-            <a href="#" > </a>
-        </div> 
-        <div class="collapse navbar-collapse" id="myNavbar"> 
-            <ul class="nav navbar-nav navbar-right"> 
-                <?php
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="#"> </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <?php
                 if (isset($_SESSION['email'])) { 
                     ?>
-                <li><a href="#">Hi <?php echo $_SESSION['name']; ?></a></li>
-                <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
-                <?php
+                    <li><a href="#">Hi <?php echo $_SESSION['name']; ?></a></li>
+                    <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                    <?php
                 } else { 
-                    ?> 
-                    <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span>Register</a></li>                     
-                <?php } 
+                    ?>
+                    <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+                    <?php } 
                 ?>
-            </ul> 
-        </div> 
-    </div> 
-</div>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 
-	<br><br><br><br>
-	<center><h1 id="what" style="font-family: sans-serif; font-variant: small-caps; font-weight: 800">Online Exam Portal</h1></center>
+    <br><br><br><br>
+    <center>
+        <h1 id="what" style="font-family: sans-serif; font-variant: small-caps; font-weight: 800">Online Exam Portal
+        </h1>
+    </center>
 
-<center><h2 id="timer" style="width:6%; border-radius: 10px; background-color: red; font-weight: 900; color: white"></h2></center>
+    <center>
+        <h2 id="timer" style="width:100%; border-radius: 10px; background-color: red; font-weight: 900; color: white">
+        </h2>
+    </center>
 
-<iframe id="myframe" src="testlink.html" width="100%"  frameborder="0"  scrolling="yes" onload="resizeIframe(this)" ></iframe>
+    <iframe id="myframe" src="testlink.html" width="100%" frameborder="0" scrolling="yes"
+        onload="resizeIframe(this)"></iframe>
+<br/>
+<br/>
+<br/>
+<br/>
 
 
+    <div class="footer-bottom" style="position:fixed; bottom: 0 !important;">
 
-<div class="footer-bottom" style="position:fixed; bottom: 0 !important;">
+        <div class="container">
 
-  <div class="container">
+            <div class="row">
 
-    <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="copyright">
 
-        <div class="copyright">
+                        Copyright
 
-         Copyright 
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                    <div class="design">
+
+                        <a target="_blank" href="#">Designed By : MageshKanna</a>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-        <div class="design">
-
-           <a target="_blank" href="#">Designed By : Abhimanyuz</a>
-
-        </div>
-
-      </div>
 
     </div>
 
-  </div>
-
-</div>
 
 
+    <script>
+    setTimeout("function1()", 3000);
 
-<script>
-
-	setTimeout("function1()", 3000);
-function function1(){
-    var x = document.getElementById("myframe");
-    var y = (x.contentWindow || x.contentDocument);
-    if (y.document)
-    	y = y.document;
-    y=y.getElementById('fmsub');
-    
+    function function1() {
+        var x = document.getElementById("myframe");
+        var y = (x.contentWindow || x.contentDocument);
+        if (y.document)
+            y = y.document;
+        y = y.getElementById('fmsub');
 
 
-var time = <?php $timer=1200; echo $time; ?>;   //echo $timer; 
-			   //$_SESSION['exam_duration'] is omitted by exam time=1200 seconds
-		time = (time+1);
-		time  = time*1000;
-		function displayTimer()
-		{
-			var hours = Math.floor(time/36e5);
-			var mins = Math.floor((time%36e5)/6e4);
-			var secs = Math.floor((time%6e4)/1000);
-			$('#timer').html(hours+':'+mins+':'+secs);
-			if(time<=0)
-			{
-				y.click();		
-			}
-		}
-		setInterval(function()
-		{
-			time-=1000;
-			displayTimer();
-		},1000);
 
-}
-</script>
+        var time = <?php $timer=3600; echo $time; ?>; //echo $timer; 
+        //$_SESSION['exam_duration'] is omitted by exam time=1200 seconds
+        time = (time + 1);
+        time = time * 5000;
 
-<script>
- 
+        function displayTimer() {
+            var hours = Math.floor(time / 36e5);
+            var mins = Math.floor((time % 36e5) / 6e4);
+            var secs = Math.floor((time % 6e4) / 1000);
+            $('#timer').html(hours + ':' + mins + ':' + secs);
+            if (time <= 0) {
+                y.click();
+            }
+        }
+        setInterval(function() {
+            time -= 1000;
+            displayTimer();
+        }, 1000);
+
+    }
+    </script>
+
+    <script>
 
 
-</script>
+
+    </script>
 
 
 
 
 
 </body>
-	
-	
+
+
 
 
 </html>
