@@ -44,7 +44,7 @@ CREATE TABLE `abhi_question` (
 --
 
 INSERT INTO `abhi_question` (`que_id`, `que_desc`, `ans1`, `ans2`, `ans3`, `ans4`, `true_ans`, `subject`) VALUES
-(1, 'Who is considered as the creator of JAVA ?', 'Dennis Richie', 'Ken Thompson', 'James Gosling', 'Bjarne Stroupstrup', 3, 'java'),
+(1, 'If you wanted to convey the most severe type of hazard, which word would you use?', 'Warning', 'Notice', 'Danger', 'Caution', 3, 'Artisan'),
 (2, 'Which of the following statements about the Java language is true?', 'Java supports only Procedural Oriented Programming approach', 'Both Procedural and Object Oriented Programming are supported in Java', 'Java supports only Object Oriented Programming approach', 'None of the Above\r\n', 3, 'java'),
 (3, 'JVM stands for?', 'Java Verified Machine', 'Java Virtual Machine 	', 'Java Very large Machine 	', 'Java Very small machine', 2, 'java'),
 (4, 'Java source files are compiled and converted to', 'Object code', 'machine code', 'Bytecode', 'executable file', 3, 'java'),
